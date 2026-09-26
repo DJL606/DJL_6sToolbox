@@ -44,7 +44,7 @@
 ### 直接使用
 
 1. 安装 [.NET 8 桌面运行时](https://dotnet.microsoft.com/download/dotnet/8.0)（若使用单文件自包含版则不需要）。
-2. 从 Releases 下载 `DJL_6sToolbox.exe`。
+2. 从 [Releases](https://github.com/DJL606/DJL_6sToolbox/releases) 下载 `DJL_6sToolbox.exe`。
 3. 双击运行。
 
 应用数据保存在：
@@ -159,7 +159,7 @@ automatic video scanning, liking, ADB device bridging, mobile environment simula
 ### Usage
 
 1. Install [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0) if needed.
-2. Download `DJL_6sToolbox.exe` from Releases.
+2. Download `DJL_6sToolbox.exe` from [Releases](https://github.com/DJL606/DJL_6sToolbox/releases).
 3. Run it.
 
 Application data is stored at:
