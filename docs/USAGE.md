@@ -105,8 +105,8 @@ ADB 桥可以让请求从 Android 模拟器/设备上的 `curl` 发出，使 IP�
    - 获取 Geetest v3 点选验证码图片
    - 本地 OCR 识别提示词和候选文字
    - 按提示词顺序计算点击坐标
-   - 通过 WebView2 执行自动化点击
-   - 获取 `validate` 后继续原请求
+   - 通过 WebView2 执行自动化点击（实验性）
+   - 获取 `validate` 后继续原请求（实验性，可能需要后续更新）
 
 > 注意：人机验证属于实验性功能，B 站风控策略可能变化，不保证 100% 成功。
 > 本项目不调用任何第三方打码平台。
@@ -217,8 +217,8 @@ Each phone profile can store:
    - fetches the Geetest v3 click CAPTCHA image,
    - runs local OCR,
    - computes click coordinates in prompt order,
-   - automates clicks via WebView2,
-   - retrieves `validate` and continues.
+   - automates clicks via WebView2 (experimental),
+   - retrieves `validate` and continues (experimental; may require future updates).
 3. No third-party CAPTCHA-solving service is used.
 
 ### 9. Tray & Startup
