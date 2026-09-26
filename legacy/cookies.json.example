@@ -1,0 +1,7 @@
+{
+    "SESSDATA": "your_sessdata",
+    "bili_jct": "your_csrf_token",
+    "DedeUserID": "your_user_id",
+    "DedeUserID__ckMd5": "your_ckmd5",
+    "sid": "your_sid"
+} 

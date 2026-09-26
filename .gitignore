@@ -17,8 +17,6 @@ iBiliPlayer-bili.apk
 *.log
 logs/
 
-# Legacy reference project (may contain example credentials)
-legacy/
 
 # Misc
 *.zip

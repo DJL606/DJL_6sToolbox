@@ -6,6 +6,8 @@
 
 ## 中文说明
 
+📖 **详细使用教程：[docs/USAGE.md](docs/USAGE.md)**
+
 **DJL_6's 工具箱** 是一个基于 **C# / WPF / .NET 8** 的 Windows 桌面工具，用于 B 站自动化场景：
 自动扫描视频、点赞、ADB 设备桥接、手机环境模拟，以及本地人机验证辅助。
 
@@ -114,6 +116,8 @@ tessdata/                          # OCR 语言包（内嵌资源）
 ---
 
 ## English
+
+📖 **Detailed user guide: [docs/USAGE.md](docs/USAGE.md)**
 
 **DJL_6's Toolbox** is a Windows desktop application built with **C# / WPF / .NET 8** for Bilibili automation:
 automatic video scanning, liking, ADB device bridging, mobile environment simulation, and local CAPTCHA assistance.
