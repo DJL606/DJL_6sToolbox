@@ -12,6 +12,7 @@
 自动扫描视频、点赞、ADB 设备桥接、手机环境模拟，以及本地人机验证辅助。
 
 > 本项目仅供学习与个人自动化研究使用，请遵守 B 站社区规范与用户协议。
+> 运行环境：Windows 10 / 11。
 
 ### 功能特性
 
@@ -35,8 +36,9 @@
 - 人机验证辅助（实验性）
   - 支持 Geetest v3 点选验证码图片获取
   - 本地 OCR 识别（Tesseract，中文语言包内嵌）
-  - 首页显示验证码图片、识别进度与人机验证日志
+  - 总览页预留验证码图片、识别进度与人机验证日志展示（实验性）
   - 不调用任何第三方打码平台
+  - 自动触发流程仍在持续完善，可能无法保证每次通过
 - 日志自动滚动，避免占用过多磁盘
 
 ### 直接使用
@@ -93,13 +95,15 @@ DJL_6sToolbox.Desktop/
 │  ├─ TrayService.cs               # 系统托盘
 │  └─ ...
 └─ ViewModels/                     # MVVM 命令与属性
-docs/                              # 技术文档
-tessdata/                          # OCR 语言包（内嵌资源）
+docs/                              # 技术文档（含详细使用教程）
+legacy/                             # 旧 Python 参考项目（已脱敏）
+third_party/                        # 第三方参考代码与许可证说明
+DJL_6sToolbox.Desktop/tessdata/     # OCR 语言包（内嵌资源）
 ```
 
 ### 安全与合规
 
-- 所有敏感数据只保存在用户本机 `%AppData%\DJL_6sToolbox\`。
+- Cookie、AccessKey、Buvid 等敏感数据只保存在用户本机 `%AppData%\DJL_6sToolbox\`，不会自动上传到本仓库；但程序需要联网向 B 站发送请求。
 - 请勿将个人 Cookie/Token 提交到公开仓库。
 - 自动点赞、人机验证辅助等功能可能违反平台规则，使用风险自负。
 - 请合理设置频率，避免对平台造成压力。
@@ -111,6 +115,7 @@ tessdata/                          # OCR 语言包（内嵌资源）
 
 - 许可证全文：[LICENSE](LICENSE)
 - 协议说明：<https://creativecommons.org/licenses/by-nc/4.0/>
+- 第三方组件（如 `third_party/gcc15-bilibili-captcha`）保留其原始 MIT 许可证，详见 [third_party/README.md](third_party/README.md)。
 
 ---
 
@@ -122,6 +127,7 @@ tessdata/                          # OCR 语言包（内嵌资源）
 automatic video scanning, liking, ADB device bridging, mobile environment simulation, and local CAPTCHA assistance.
 
 > This project is for learning and personal automation research only. Please follow Bilibili's community rules and terms of service.
+> Platform: Windows 10 / 11.
 
 ### Features
 
@@ -145,8 +151,9 @@ automatic video scanning, liking, ADB device bridging, mobile environment simula
 - CAPTCHA assistance (experimental)
   - Fetch Geetest v3 click CAPTCHA images
   - Local OCR via Tesseract with embedded Chinese language data
-  - Show CAPTCHA image, progress, and CAPTCHA log in the UI
+  - Overview page reserves CAPTCHA image, progress, and CAPTCHA log display (experimental)
   - No third-party CAPTCHA solving service is used
+  - Automatic trigger integration is still being improved and may not always pass
 - Log rotation to avoid excessive disk usage
 
 ### Usage
@@ -199,12 +206,14 @@ DJL_6sToolbox.Desktop/
 │  └─ ...
 └─ ViewModels/
 docs/
-tessdata/
+legacy/
+third_party/
+DJL_6sToolbox.Desktop/tessdata/
 ```
 
 ### Security & Compliance
 
-- All sensitive data stays locally under `%AppData%\DJL_6sToolbox\`.
+- Sensitive data such as cookies, AccessKeys, and Buvids stays locally under `%AppData%\DJL_6sToolbox\` and is not automatically uploaded to this repository; however, the app does need network access to send requests to Bilibili.
 - Never commit personal cookies or tokens.
 - Automated liking and CAPTCHA assistance may violate platform rules. Use at your own risk.
 - Keep request rates reasonable.
@@ -216,3 +225,4 @@ Commercial use is prohibited. Attribution is required.
 
 - Full license: [LICENSE](LICENSE)
 - Human-readable summary: <https://creativecommons.org/licenses/by-nc/4.0/>
+- Third-party components (e.g. `third_party/gcc15-bilibili-captcha`) retain their original MIT license; see [third_party/README.md](third_party/README.md).
