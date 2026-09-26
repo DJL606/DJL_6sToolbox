@@ -1,0 +1,27 @@
+# Build output
+bin/
+obj/
+dist/
+dist_test/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Local app data / sensitive
+devices/
+bilibili_captcha_reference/
+iBiliPlayer-bili.apk
+*.apk
+*.log
+logs/
+
+# Legacy reference project (may contain example credentials)
+legacy/
+
+# Misc
+*.zip
+*.tmp
+*.bak
+*.old

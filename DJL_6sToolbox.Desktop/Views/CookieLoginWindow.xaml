@@ -1,0 +1,50 @@
+<Window x:Class="DJL_6sToolbox.Desktop.Views.CookieLoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="登录B站获取Cookie"
+        Width="860" Height="600"
+        MinWidth="760" MinHeight="560"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="None"
+        AllowsTransparency="False"
+        Background="#FF0F1115">
+    <Border CornerRadius="12" Background="#7A0F1115"
+            BorderBrush="#992A2E37" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="44" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="Transparent" MouseLeftButtonDown="TitleBar_OnMouseLeftButtonDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Margin="16,0" VerticalAlignment="Center">
+                    <TextBlock Text="DJL_6's 工具箱" FontSize="15" FontWeight="SemiBold" Foreground="#F2F3F5" />
+                    <TextBlock Text="  ·  登录 B 站获取 Cookie" Margin="10,0,0,0" FontSize="13"
+                               Foreground="#9AA0AA" VerticalAlignment="Center" />
+                </StackPanel>
+                <Button Grid.Column="1" Content="✕" Width="46" Height="36" Margin="0,0,12,0"
+                        Background="Transparent" Foreground="#9AA0AA" BorderThickness="0"
+                        Cursor="Hand" Click="Close_OnClick" />
+            </Grid>
+
+            <wv2:WebView2 x:Name="WebView" Grid.Row="1" Margin="12,0,12,0" />
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="16,12" HorizontalAlignment="Right">
+                <TextBlock Text="请在弹出的页面登录 B 站，登录成功后点击下方按钮自动读取 Cookie。"
+                           Foreground="#9AA0AA" VerticalAlignment="Center" Margin="0,0,16,0" />
+                <Button Content="取消" Width="90" Height="36" Margin="0,0,8,0"
+                        Background="#1B1E25" Foreground="#F2F3F5" BorderBrush="#2A2E37" BorderThickness="1"
+                        Cursor="Hand" Click="Cancel_OnClick" />
+                <Button Content="获取 Cookie" Width="110" Height="36"
+                        Background="#FB7299" Foreground="White" BorderThickness="0"
+                        Cursor="Hand" Click="FetchCookie_OnClick" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

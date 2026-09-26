@@ -1,0 +1,47 @@
+<Window x:Class="DJL_6sToolbox.Desktop.Views.ModernDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DJL_6's 工具箱"
+        Width="430"
+        SizeToContent="Height"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False">
+    <Border CornerRadius="14" Background="#F20F1115"
+            BorderBrush="#662A2E37" BorderThickness="1">
+        <Grid Margin="24,22">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="IconText" Text="ℹ" FontSize="24"
+                           Foreground="#23ADE5" VerticalAlignment="Center" />
+                <TextBlock x:Name="TitleText" Text="提示" FontSize="17" FontWeight="SemiBold"
+                           Foreground="#F2F3F5" Margin="12,0,0,0" VerticalAlignment="Center" />
+            </StackPanel>
+
+            <TextBlock x:Name="MessageText" Grid.Row="1" Text=""
+                       Foreground="#F2F3F5" FontSize="14" LineHeight="22"
+                       TextWrapping="Wrap" Margin="0,16,0,0" />
+
+            <StackPanel x:Name="ButtonPanel" Grid.Row="2" Orientation="Horizontal"
+                        HorizontalAlignment="Right" Margin="0,22,0,0">
+                <Button x:Name="YesButton" Content="是" Width="88" Height="34" Margin="0,0,8,0"
+                        Background="#FB7299" Foreground="White" BorderThickness="0"
+                        Cursor="Hand" Click="Yes_OnClick" />
+                <Button x:Name="NoButton" Content="否" Width="88" Height="34" Margin="0,0,8,0"
+                        Background="#1B1E25" Foreground="#F2F3F5" BorderBrush="#2A2E37" BorderThickness="1"
+                        Cursor="Hand" Click="No_OnClick" />
+                <Button x:Name="CancelButton" Content="取消" Width="88" Height="34"
+                        Background="#1B1E25" Foreground="#F2F3F5" BorderBrush="#2A2E37" BorderThickness="1"
+                        Cursor="Hand" Click="Cancel_OnClick" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
