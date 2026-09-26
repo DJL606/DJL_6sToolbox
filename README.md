@@ -99,7 +99,6 @@ tessdata/                          # OCR 语言包（内嵌资源）
 
 ### 安全与合规
 
-- 本项目不包含任何用户的 Cookie、AccessKey、Buvid、设备指纹或日志。
 - 所有敏感数据只保存在用户本机 `%AppData%\DJL_6sToolbox\`。
 - 请勿将个人 Cookie/Token 提交到公开仓库。
 - 自动点赞、人机验证辅助等功能可能违反平台规则，使用风险自负。
@@ -205,7 +204,6 @@ tessdata/
 
 ### Security & Compliance
 
-- This repository contains no user cookies, AccessKeys, Buvids, device fingerprints, or logs.
 - All sensitive data stays locally under `%AppData%\DJL_6sToolbox\`.
 - Never commit personal cookies or tokens.
 - Automated liking and CAPTCHA assistance may violate platform rules. Use at your own risk.
